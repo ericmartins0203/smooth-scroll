@@ -28,7 +28,6 @@ function AnimatedText({children}) {
 
 
   useLayoutEffect( () => {
-    console.log(width)
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(text.current, {
       scrollTrigger: {

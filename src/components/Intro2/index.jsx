@@ -1,10 +1,10 @@
-'use client';
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './style.module.css';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 const anim = {
   initial: {
@@ -21,6 +21,25 @@ const anim = {
 }
 
 export default function Index({menuIsActive}) {
+
+  const background = useRef(null);
+  const introImage = useRef(null);
+
+  useLayoutEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: true,
+        start: "top",
+        end: "+=500px",
+      },
+    })
+    timeline
+      .from(background.current, {clipPath: `inset(15%)`})
+      .to(introImage.current, {height: "200px"}, 0)
+  }, [])
 
   /**
    * Shuffles array in place (Fisher–Yates shuffle).
@@ -56,25 +75,6 @@ export default function Index({menuIsActive}) {
     })
   }
 
-  const background = useRef(null);
-  const introImage = useRef(null);
-
-  useLayoutEffect( () => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: true,
-        start: "top",
-        end: "+=500px",
-      },
-    })
-    timeline
-      .from(background.current, {clipPath: `inset(15%)`})
-      .to(introImage.current, {height: "200px"}, 0)
-  }, [])
-
   return (
     <>
       <div className={styles.pixelBackground}>
@@ -82,12 +82,11 @@ export default function Index({menuIsActive}) {
           [...Array(20)].map( (_, index) => {
             return <div key={index} className={styles.column}>
               {
-                getBlocks()
+                (typeof window !== 'undefined') && getBlocks()
               }
             </div>
           })
         }
-        <div></div>
       </div>
       <div className={styles.intro}>
 
