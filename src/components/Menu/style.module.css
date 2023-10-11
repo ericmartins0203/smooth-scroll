@@ -6,9 +6,10 @@
   justify-content: center;
   height: 90vh;
   width: 100%;
-  z-index: 5;
+  z-index: 6;
 }
 .menu p{
   font-size: 5vw;
   margin: 5px;
+  color: black
 }
