@@ -40,6 +40,7 @@ export default function Index({menuIsActive}) {
             fill={true}
             alt="background image"
             priority={true}
+            quality={100}
           />
         </div>
         
@@ -50,6 +51,7 @@ export default function Index({menuIsActive}) {
               alt="intro image"
               fill={true} 
               priority={true}
+              quality={100}
             />
           </div>
           <h1 data-scroll data-scroll-speed="0.7">SMOOTH SCROLL</h1>

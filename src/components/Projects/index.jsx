@@ -48,6 +48,9 @@ export default function Index() {
             fill={true}
             alt="project image"
             priority={true}
+            quality={100}
+            placeholder="blur"
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0FBWtBwABtgDctKE7+QAAAABJRU5ErkJggg=='
           />
         </div>
         <div className={styles.column}>
