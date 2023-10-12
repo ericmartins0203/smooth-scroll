@@ -2,16 +2,16 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styles from './style.module.css';
 import Image from 'next/image';
 import gsap from 'gsap';
-import { motion } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Centered from '../PixelTransition/Centered/Index';
+import Horizontal from '../PixelTransition/Horizontal';
+import Vertical from '../PixelTransition/Vertical';
 
 
 export default function Index({menuIsActive}) {
 
   const background = useRef(null);
-  const introImage = useRef(null);
-  
+  const introImage = useRef(null);  
 
   useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);

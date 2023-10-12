@@ -16,6 +16,7 @@
   flex-direction: column;
   position: relative;
   cursor: pointer;
+  padding: 30px;
 }
 .header .burger::before, .header .burger::after{
   display: block;

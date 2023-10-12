@@ -11,5 +11,6 @@
 .menu p{
   font-size: 5vw;
   margin: 5px;
-  color: black
+  color: black;
+  opacity: 1;  
 }
