@@ -7,8 +7,10 @@
   position: fixed;
   z-index: 99;
   background-color: #141516;
-  position: relative;
+  position: fixed;
+  overflow: hidden;
 }
+
 .introduction svg{
   position: absolute;
   top: 0;
