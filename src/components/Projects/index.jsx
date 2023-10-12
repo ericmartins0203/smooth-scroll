@@ -40,7 +40,7 @@ export default function Index() {
   }, [])
 
   return (
-    <div ref={container} className={styles.projects}>
+    <div id='description' ref={container} className={styles.projects}>
       <div className={styles.projectDescription}>
         <div ref={imageContainer} className={styles.imageContainer}>
           <Image 
@@ -58,7 +58,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className={styles.projectList}>
+      <div id='projects' className={styles.projectList}>
         {
           projects.map( (project, index) => {
             return (

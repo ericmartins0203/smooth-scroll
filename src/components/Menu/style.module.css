@@ -14,3 +14,7 @@
   color: black;
   opacity: 1;  
 }
+
+.menu a {
+  text-decoration: none
+}

@@ -36,7 +36,7 @@ export default function Home() {
     <main className={styles.main}>
       {isLoading && <Preloader />}
       <Header menuIsActive={menuIsActive} setMenuIsActive={setMenuIsActive}/>
-      <Menu menuIsActive={menuIsActive}/>
+      <Menu menuIsActive={menuIsActive} setMenuIsActive={setMenuIsActive}/>
       <Intro menuIsActive={menuIsActive}/>
       <Description />
       <Projects />
