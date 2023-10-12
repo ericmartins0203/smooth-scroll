@@ -1,0 +1,107 @@
+.introduction{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #141516;
+  position: relative;
+}
+.introduction svg{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+.introduction svg path{
+  fill: #141516;
+}
+.introduction p{
+  display: flex;
+  color: white;
+  font-size: 42px;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+.introduction p span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dotPulse {
+  margin-left: 30px;
+  margin-top: 15px;
+  position: relative;
+  background-color: white;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  color: white;
+  z-index: 999999;
+  box-shadow: 9999px 0 0 -5px;
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+.dotPulse::before, .dotPulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+}
+.dotPulse::before {
+  box-shadow: 9984px 0 0 -5px;
+  animation: dotPulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.dotPulse::after {
+  box-shadow: 10014px 0 0 -5px;
+  animation: dotPulse-after 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+}
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+}
+@keyframes dotPulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+}
